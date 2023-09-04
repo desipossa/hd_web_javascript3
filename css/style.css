@@ -1,0 +1,56 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.sec {
+  padding: 10rem 0;
+}
+
+.inner {
+  max-width: 121.2rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.TopBanner {
+  position: relative;
+  background: #008850;
+}
+.TopBanner .itm01 a {
+  background-image: url(../../images/banner01.jpg);
+}
+.TopBanner .itm02 a {
+  background-image: url(../../images/banner02.png);
+}
+.TopBanner .itm03 a {
+  background-image: url(../../images/banner03.jpg);
+}
+.TopBanner .itm a {
+  display: block;
+  height: 16rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.TopBanner .dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  display: flex;
+  gap: 4px;
+}
+.TopBanner .dots li {
+  background: #f9f9f9;
+}
+.TopBanner .dots li a {
+  display: block;
+  width: 4px;
+  height: 10px;
+}/*# sourceMappingURL=style.css.map */

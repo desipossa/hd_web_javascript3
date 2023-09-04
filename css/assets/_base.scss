@@ -1,0 +1,18 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: $body-color;
+}
+
+.sec {
+    @include section(null);
+}
+
+.inner {
+    max-width: $default-size;
+    margin: 0 auto;
+    padding: 0 $margin-size;
+}

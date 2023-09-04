@@ -49,6 +49,7 @@ li {
 
 body {
     line-height: 1;
+    word-break: keep-all;
 }
 
 input,
@@ -71,4 +72,17 @@ i,
 em,
 address {
     font-style: normal;
+}
+
+.skip {
+    display: none;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }

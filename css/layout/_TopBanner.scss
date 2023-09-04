@@ -1,0 +1,52 @@
+.TopBanner {
+    position: relative;
+    background: $primary-color;
+
+    .itm01 {
+        a {
+            background-image: url(../../images/banner01.jpg);
+        }
+    }
+
+    .itm02 {
+        a {
+            background-image: url(../../images/banner02.png);
+        }
+    }
+
+    .itm03 {
+        a {
+            background-image: url(../../images/banner03.jpg);
+        }
+    }
+
+    .itm a {
+        display: block;
+        height: 16rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 999;
+
+        display: flex;
+        gap: 4px;
+
+        & li {
+
+            background: $light-color;
+
+            a {
+                display: block;
+                width: 4px;
+                height: 10px;
+            }
+        }
+    }
+}
