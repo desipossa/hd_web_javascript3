@@ -18,7 +18,6 @@ body {
 }
 
 .TopBanner {
-  position: relative;
   background: #008850;
   height: 16rem;
   overflow: hidden;
@@ -83,16 +82,29 @@ body {
 }
 
 .Header {
-  position: absolute;
-  top: auto;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  height: 8rem;
+}
+.Header .header_wrap {
   display: flex;
   align-items: center;
   padding: 0 8rem;
+  height: 8rem;
   color: #f9f9f9;
+}
+.Header.on {
+  height: 8rem;
+  background: rgb(255, 255, 255);
+}
+.Header h1 {
+  flex: 0 0 calc((100% - 121.2rem) / 2);
+  min-width: 260px;
+}
+.Header .util {
+  margin: 0 0 0 auto;
 }
 .Header .Gnb {
   line-height: 8rem;
@@ -100,8 +112,13 @@ body {
 .Header .Gnb > ul {
   display: flex;
 }
+.Header .Gnb > ul a {
+  display: block;
+  padding: 0 4rem 0 0;
+  font-size: 2rem;
+}
 
 .Main {
-  height: 100vh;
+  height: 200vh;
   background: url(../../images/visual01.jpg);
 }/*# sourceMappingURL=style.css.map */

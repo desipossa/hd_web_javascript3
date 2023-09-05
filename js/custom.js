@@ -32,6 +32,16 @@ TOPBANNER_CLOSE.addEventListener('click', e => {
 });
 
 
+const HEADER = document.querySelector('.Header');
+
+window.addEventListener('scroll', () => {
+    const sct = window.scrollY;
+    sct > 0
+        ? HEADER.classList.add('on')
+        : HEADER.classList.remove('on');
+})
+
+
 
 
 

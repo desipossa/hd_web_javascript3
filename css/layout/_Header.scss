@@ -1,30 +1,49 @@
 .Header {
-    position: absolute;
-    top: auto;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
 
-    height: 8rem;
 
-    display: flex;
-    // justify-content: space-between;
-    align-items: center;
 
-    padding: 0 8rem;
 
-    color: $light-color;
+    .header_wrap {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+
+        padding: 0 8rem;
+        height: 8rem;
+        color: $light-color;
+    }
+
+
+    &.on {
+        height: 8rem;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    h1 {
+        flex: 0 0 calc((100% - $default-size)/2);
+        min-width: 260px;
+    }
+
+    .util {
+        margin: 0 0 0 auto;
+    }
 
     .Gnb {
-        // width: $default-size;
-        // position: absolute;
-        // top: 0;
-        // left: 50%;
-        // margin-left: -$default-size/2;
         line-height: 8rem;
 
         &>ul {
             display: flex;
+
+            a {
+                display: block;
+                padding: 0 4rem 0 0;
+                font-size: 2rem;
+            }
         }
     }
 }
