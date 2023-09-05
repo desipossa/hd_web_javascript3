@@ -1,0 +1,95 @@
+.MainVisual {
+    position: relative;
+
+    .MainSlide {
+        .itm {
+            height: calc(100vh - 16rem);
+
+            &.itm01 {
+                background: url(../../images/visual01.jpg) no-repeat center center/cover;
+            }
+
+            &.itm02 {
+                background: url(../../images/visual02.jpg) no-repeat center center/cover;
+            }
+
+            .slogan {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: $default-size;
+                transform: translate(-50%, -50%);
+                color: $light-color;
+
+                transition: 0.5s 0.3s;
+            }
+
+            &.on {
+                .slogan {
+                    color: tomato;
+                }
+            }
+        }
+    }
+
+    .arrows {
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+
+            color: $light-color;
+            border: none;
+            background: transparent;
+
+            &.arrow_left {
+                margin: 0 0 0 $default-size/-2;
+            }
+
+            &.arrow_right {
+                margin: 0 0 0 $default-size/2;
+            }
+
+        }
+
+
+    }
+
+    .right_link {
+        position: absolute;
+        top: 15rem;
+        left: 50%;
+        margin: 0 0 0 $default-size/2;
+        transform: translate(-100%, 0);
+        color: $light-color;
+
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+
+        li {
+            &.on {
+                color: tomato;
+            }
+        }
+
+        a {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    .num {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        margin: 0 0 0 $default-size/-2;
+        z-index: 999;
+
+        color: $light-color;
+    }
+
+
+}

@@ -33,12 +33,47 @@ TOPBANNER_CLOSE.addEventListener('click', e => {
 
 
 const HEADER = document.querySelector('.Header');
+const MAIN_SLIDE_ARROW_LEFT = document.querySelector('.MainVisual .arrow_left');
+const MAIN_SLIDE_ARROW_RIGHT = document.querySelector('.MainVisual .arrow_right');
+const MAIN_SLIDE_NUM = document.querySelector('.MainVisual .num strong');
+const MAIN_SLIDE_NUM_TOTAL = document.querySelector('.MainVisual .num span');
+const MAIN_SLIDE_LIST = document.querySelectorAll('.MainVisual .right_link li');
 
 window.addEventListener('scroll', () => {
     const sct = window.scrollY;
     sct > 0
         ? HEADER.classList.add('on')
         : HEADER.classList.remove('on');
+});
+
+const MAIN_SLIDE = new Swiper('.MainSlide', {
+    loop: true,
+    slideActiveClass: 'on',
+    on: {
+        init: function () {
+            MAIN_SLIDE_NUM_TOTAL.innerHTML = `0${this.slides.length}`;
+        },
+        slideChangeTransitionStart: function () {
+            //console.log(this.realIndex, this.slides.length);
+            MAIN_SLIDE_NUM.innerHTML = `0${this.realIndex + 1}`;
+            MAIN_SLIDE_LIST.forEach(it => it.classList.remove('on'));
+            MAIN_SLIDE_LIST[this.realIndex].classList.add('on');
+        }
+    }
+});
+
+MAIN_SLIDE_ARROW_LEFT.addEventListener('click', () => {
+    MAIN_SLIDE.slidePrev();
+});
+MAIN_SLIDE_ARROW_RIGHT.addEventListener('click', () => {
+    MAIN_SLIDE.slideNext();
+});
+
+MAIN_SLIDE_LIST.forEach((it, idx) => {
+    it.addEventListener('click', e => {
+        e.preventDefault();
+        MAIN_SLIDE.slideToLoop(idx);
+    })
 })
 
 
