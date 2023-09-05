@@ -86,7 +86,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
 }
 .Header .header_wrap {
   display: flex;
@@ -94,8 +93,9 @@ body {
   padding: 0 8rem;
   height: 8rem;
   color: #f9f9f9;
+  background: rgba(0, 0, 0, 0.5);
 }
-.Header.on {
+.Header.on .header_wrap {
   height: 8rem;
   background: rgb(255, 255, 255);
 }

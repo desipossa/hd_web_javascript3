@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+
 
 
 
@@ -16,12 +16,17 @@
         padding: 0 8rem;
         height: 8rem;
         color: $light-color;
+
+        background: rgba(0, 0, 0, 0.5);
     }
 
 
     &.on {
-        height: 8rem;
-        background: rgba(255, 255, 255, 1);
+        .header_wrap {
+            height: 8rem;
+            background: rgba(255, 255, 255, 1);
+        }
+
     }
 
     h1 {
