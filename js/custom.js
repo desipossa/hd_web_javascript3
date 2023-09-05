@@ -29,7 +29,9 @@ const TOPBANNER_CLOSE = document.querySelector('.TopBanner .close');
 TOPBANNER_CLOSE.addEventListener('click', e => {
     e.preventDefault();
     TOPBANNER.classList.add('on');
-})
+});
+
+
 
 
 

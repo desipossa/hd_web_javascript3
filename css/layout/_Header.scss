@@ -1,0 +1,30 @@
+.Header {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    height: 8rem;
+
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8rem;
+
+    color: $light-color;
+
+    .Gnb {
+        // width: $default-size;
+        // position: absolute;
+        // top: 0;
+        // left: 50%;
+        // margin-left: -$default-size/2;
+        line-height: 8rem;
+
+        &>ul {
+            display: flex;
+        }
+    }
+}

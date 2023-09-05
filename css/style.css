@@ -80,4 +80,28 @@ body {
   color: #f9f9f9;
   font-size: 3.2rem;
   font-variation-settings: "wght" 200;
+}
+
+.Header {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  padding: 0 8rem;
+  color: #f9f9f9;
+}
+.Header .Gnb {
+  line-height: 8rem;
+}
+.Header .Gnb > ul {
+  display: flex;
+}
+
+.Main {
+  height: 100vh;
+  background: url(../../images/visual01.jpg);
 }/*# sourceMappingURL=style.css.map */
