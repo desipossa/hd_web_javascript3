@@ -92,13 +92,24 @@ body {
   display: flex;
   align-items: center;
   padding: 0 8rem;
-  height: 8rem;
+  height: 10rem;
   color: #f9f9f9;
   background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.Header .header_wrap .logo {
+  display: block;
+  width: 188px;
+  height: 22px;
+  background: url(../../images/logo01.png);
 }
 .Header.on .header_wrap {
   height: 8rem;
   background: rgb(255, 255, 255);
+  color: #333;
+}
+.Header.on .header_wrap .logo {
+  background: url(../../images/logo02.png);
 }
 .Header h1 {
   flex: 0 0 calc((100% - 121.2rem) / 2);
@@ -116,7 +127,8 @@ body {
 .Header .Gnb > ul a {
   display: block;
   padding: 0 4rem 0 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .Main {

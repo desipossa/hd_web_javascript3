@@ -2,8 +2,6 @@
     position: sticky;
     top: 0;
 
-    // left: 0;
-    // right: 0;
     .header_wrap {
         position: absolute;
         left: 0;
@@ -14,17 +12,32 @@
         align-items: center;
 
         padding: 0 8rem;
-        height: 8rem;
+        height: 10rem;
         color: $light-color;
 
         background: rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+
+        .logo {
+            display: block;
+            width: 188px;
+            height: 22px;
+
+            background: url(../../images/logo01.png);
+        }
     }
 
 
     &.on {
+
         .header_wrap {
             height: 8rem;
             background: rgba(255, 255, 255, 1);
+            color: $body-color;
+
+            .logo {
+                background: url(../../images/logo02.png);
+            }
         }
 
     }
@@ -47,7 +60,8 @@
             a {
                 display: block;
                 padding: 0 4rem 0 0;
-                font-size: 2rem;
+                font-size: 1.8rem;
+                font-weight: 500;
             }
         }
     }
