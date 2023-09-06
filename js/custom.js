@@ -74,7 +74,42 @@ MAIN_SLIDE_LIST.forEach((it, idx) => {
         e.preventDefault();
         MAIN_SLIDE.slideToLoop(idx);
     })
-})
+});
+
+
+const PORTFOLIO_LEFT_SLIDE = new Swiper('.mp_slide_left', {
+    loop: true,
+    effect: "fade",
+    //allowTouchMove: false,
+    fadeEffect: {
+        crossFade: true
+    },
+    slideActiveClass: 'on',
+});
+const PORTFOLIO_RIGHT_SLIDE = new Swiper('.mp_slide_right', {
+    loop: true,
+    slidesPerView: 4.5,
+    spaceBetween: 30,
+    //allowTouchMove: false,
+    slideActiveClass: 'on',
+});
+
+
+//두 개의 슬라이드 연결
+
+PORTFOLIO_LEFT_SLIDE.controller.control = PORTFOLIO_RIGHT_SLIDE;
+PORTFOLIO_RIGHT_SLIDE.controller.control = PORTFOLIO_LEFT_SLIDE;
+
+
+const PORTFOLIO_SLIDE_ARROW_LEFT = document.querySelector('.MainPortfolio .arrow_left');
+const PORTFOLIO_SLIDE_ARROW_RIGHT = document.querySelector('.MainPortfolio .arrow_right');
+
+PORTFOLIO_SLIDE_ARROW_LEFT.addEventListener('click', () => {
+    PORTFOLIO_RIGHT_SLIDE.slidePrev();
+});
+PORTFOLIO_SLIDE_ARROW_RIGHT.addEventListener('click', () => {
+    PORTFOLIO_RIGHT_SLIDE.slideNext();
+});
 
 
 

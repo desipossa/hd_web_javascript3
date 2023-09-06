@@ -9,12 +9,52 @@ body {
 
 .sec {
   padding: 10rem 0;
+  letter-spacing: -0.025em;
+}
+
+.tit_wrap {
+  max-width: 121.2rem;
+  padding: 0 1.6rem;
+  margin: 0 auto 4.8rem auto;
+}
+.tit_wrap h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0 0 2.4rem 0;
+}
+.tit_wrap p {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .inner {
   max-width: 121.2rem;
   margin: 0 auto;
   padding: 0 1.6rem;
+}
+
+.f_inner {
+  max-width: 121.2rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  display: flex;
+}
+.f_inner > * {
+  flex: 0 1 auto;
+}
+
+.a_btn {
+  display: inline-block;
+  padding: 1.4rem 2.4rem;
+  border: 1px solid #008850;
+  color: #008850;
+  font-size: 1.6rem;
+}
+.a_btn::after {
+  content: "\e5cc";
+  font-family: "Material Symbols Outlined";
+  vertical-align: -2px;
+  margin: 0 0 0 10px;
 }
 
 .TopBanner {
@@ -132,6 +172,10 @@ body {
   font-weight: 500;
 }
 
+.Main {
+  font: inherit;
+}
+
 .MainVisual {
   position: relative;
 }
@@ -151,30 +195,57 @@ body {
   width: 121.2rem;
   transform: translate(-50%, -50%);
   color: #f9f9f9;
+  text-shadow: 0 0 3px #000;
   transition: 0.5s 0.3s;
 }
-.MainVisual .MainSlide .itm.on .slogan {
-  color: tomato;
+.MainVisual .MainSlide .itm .slogan strong {
+  display: block;
+  margin: 0 0 2rem 0;
+  font-size: 6.4rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  transform: translate(0, 10rem);
+  opacity: 0;
+}
+.MainVisual .MainSlide .itm .slogan p {
+  font-size: 2rem;
+  transform: translate(0, 10rem);
+  opacity: 0;
+}
+.MainVisual .MainSlide .itm.on .slogan strong {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.4s 0.3s;
+}
+.MainVisual .MainSlide .itm.on .slogan p {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.4s 0.6s;
 }
 .MainVisual .arrows button {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
   z-index: 999;
   color: #f9f9f9;
   border: none;
   background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.MainVisual .arrows button span {
+  font-size: 8rem;
+  font-variation-settings: "wght" 100;
 }
 .MainVisual .arrows button.arrow_left {
-  margin: 0 0 0 -60.6rem;
+  left: 5rem;
 }
 .MainVisual .arrows button.arrow_right {
-  margin: 0 0 0 60.6rem;
+  right: 5rem;
 }
 .MainVisual .right_link {
   position: absolute;
-  top: 15rem;
+  top: 24rem;
   left: 50%;
   margin: 0 0 0 60.6rem;
   transform: translate(-100%, 0);
@@ -183,12 +254,30 @@ body {
   flex-direction: column;
   z-index: 999;
 }
-.MainVisual .right_link li.on {
-  color: tomato;
+.MainVisual .right_link li {
+  margin: 0 0 1rem 0;
+}
+.MainVisual .right_link li a {
+  font-size: 0;
+}
+.MainVisual .right_link li.on a {
+  font-size: 1.8rem;
+}
+.MainVisual .right_link li.on a::after {
+  background: #f9f9f9;
 }
 .MainVisual .right_link a {
   display: block;
   text-align: right;
+}
+.MainVisual .right_link a::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #f9f9f9;
+  margin: 0 0 0 1.6rem;
+  vertical-align: -2px;
 }
 .MainVisual .num {
   position: absolute;
@@ -197,4 +286,93 @@ body {
   margin: 0 0 0 -60.6rem;
   z-index: 999;
   color: #f9f9f9;
+}
+.MainVisual .num strong {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.MainContent {
+  text-align: center;
+}
+.MainContent .img_wrap {
+  margin: 0 0 4rem 0;
+  overflow: hidden;
+}
+.MainContent .img_wrap img {
+  transition: 0.4s;
+}
+.MainContent .img_wrap:hover img {
+  transform: scale(1.2);
+}
+.MainContent .content strong {
+  position: relative;
+  display: block;
+  margin: 0 0 2.4rem 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.MainContent .content strong::before {
+  content: "";
+  position: absolute;
+  top: -6rem;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 40px;
+  background: #008850;
+}
+.MainContent .content p {
+  margin: 0 auto 3.2rem auto;
+  max-width: 24rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.MainPortfolio {
+  background: url(../../images/main_portfolio_bg.jpg) repeat-x;
+}
+.MainPortfolio .slide_wrap figure {
+  margin: 0 0 2.4rem 0;
+}
+.MainPortfolio .slide_wrap p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.MainPortfolio .right_wrap {
+  width: calc((100% - 121.2rem) / 2 + 121.2rem);
+  margin: 0 0 0 auto;
+  display: flex;
+}
+.MainPortfolio .right_wrap .left {
+  flex: 0 0 50rem;
+  min-width: 0;
+}
+.MainPortfolio .right_wrap .left figure {
+  width: 40rem;
+  box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.3);
+}
+.MainPortfolio .right_wrap .right {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.MainPortfolio .right_wrap .right .slide_wrap {
+  margin: auto 0 0 0;
+}
+.MainPortfolio .tit_wrap {
+  color: #f9f9f9;
+  margin: 0 0 8rem 0;
+  padding: 4rem 0 0 0;
+  align-self: self-start;
+}
+.MainPortfolio .arrows button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.MainPortfolio .arrows span {
+  color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid rgba(249, 249, 249, 0.6);
 }/*# sourceMappingURL=style.css.map */
