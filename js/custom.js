@@ -85,6 +85,7 @@ const PORTFOLIO_LEFT_SLIDE = new Swiper('.mp_slide_left', {
         crossFade: true
     },
     slideActiveClass: 'on',
+    loopedSlides: 30,
 });
 const PORTFOLIO_RIGHT_SLIDE = new Swiper('.mp_slide_right', {
     loop: true,
@@ -92,6 +93,7 @@ const PORTFOLIO_RIGHT_SLIDE = new Swiper('.mp_slide_right', {
     spaceBetween: 18,
     //allowTouchMove: false,
     slideActiveClass: 'on',
+    loopedSlides: 30,
 });
 
 
@@ -156,7 +158,6 @@ SOLUTION_SLIDE_DOTS.forEach((it, idx) => {
     it.addEventListener('click', () => {
         SOLUTION_SLIDE.slideToLoop(idx)
     })
-
 })
 
 
