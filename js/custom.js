@@ -113,6 +113,14 @@ PORTFOLIO_SLIDE_ARROW_RIGHT.addEventListener('click', () => {
 });
 
 
+const SOLUTION_SLIDE_ARROW_LEFT = document.querySelector('.MainSolution .arrow_left');
+const SOLUTION_SLIDE_ARROW_RIGHT = document.querySelector('.MainSolution .arrow_right');
+const SOLUTION_SLIDE_NUM = document.querySelector('.MainSolution .num strong');
+const SOLUTION_SLIDE_NUM_TOTAL = document.querySelector('.MainSolution .num span');
+const SOLUTION_SLIDE_LIST = document.querySelectorAll('.MainSolution .desc_box li');
+const SOLUTION_SLIDE_DOTS = document.querySelectorAll('.MainSolution .dots li');
+
+
 const SOLUTION_SLIDE = new Swiper('.solu_slide', {
     loop: true,
     slidesPerView: 2,
@@ -120,7 +128,36 @@ const SOLUTION_SLIDE = new Swiper('.solu_slide', {
     centeredSlides: true,
     slidesPerView: "auto",
     slideActiveClass: 'on',
+    on: {
+        init: function () {
+            SOLUTION_SLIDE_NUM_TOTAL.innerHTML = `0${this.slides.length}`;
+        },
+        slideChangeTransitionStart: function () {
+            //console.log(this.realIndex, this.slides.length);
+            SOLUTION_SLIDE_NUM.innerHTML = `0${this.realIndex + 1}`;
+            SOLUTION_SLIDE_LIST.forEach(it => it.classList.remove('on'));
+            SOLUTION_SLIDE_LIST[this.realIndex].classList.add('on');
+            SOLUTION_SLIDE_DOTS.forEach(it => it.classList.remove('on'));
+            SOLUTION_SLIDE_DOTS[this.realIndex].classList.add('on');
+        }
+    }
 });
+
+
+SOLUTION_SLIDE_ARROW_LEFT.addEventListener('click', () => {
+    SOLUTION_SLIDE.slidePrev();
+});
+
+SOLUTION_SLIDE_ARROW_RIGHT.addEventListener('click', () => {
+    SOLUTION_SLIDE.slideNext();
+});
+
+SOLUTION_SLIDE_DOTS.forEach((it, idx) => {
+    it.addEventListener('click', () => {
+        SOLUTION_SLIDE.slideToLoop(idx)
+    })
+
+})
 
 
 

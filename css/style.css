@@ -379,7 +379,99 @@ body {
 }
 
 .MainSolution {
+  position: relative;
   background: #f8f8f8;
+  padding: 10rem 0 15rem 0;
+}
+.MainSolution li.on button {
+  background: #008850;
+}
+.MainSolution .dots {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  z-index: 999;
+  display: flex;
+  gap: 4px;
+}
+.MainSolution .dots button {
+  width: 20px;
+  height: 20px;
+  background: #eeeeee;
+  border: none;
+  cursor: pointer;
+}
+.MainSolution .arrows button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  border: none;
+  color: #f9f9f9;
+  background: transparent;
+  cursor: pointer;
+}
+.MainSolution .arrows button span {
+  border: 1rem solid #f9f9f9;
+  background: #333;
+  border-radius: 50%;
+  font-size: 4rem;
+  font-variation-settings: "wght" 100;
+}
+.MainSolution .arrows button.arrow_left {
+  margin: 0 0 0 -60.6rem;
+}
+.MainSolution .arrows button.arrow_right {
+  margin: 0 0 0 60.6rem;
+}
+.MainSolution .desc_box {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  z-index: 999;
+  background: #f9f9f9;
+  width: 30rem;
+  height: 45rem;
+  border: 1px solid #eeeeee;
+  box-shadow: 10px 10px 20px rgba(51, 51, 51, 0.25);
+  margin: 0 0 0 -50.6rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.MainSolution .desc_box::after {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 4rem;
+  height: 2px;
+  background: #008850;
+  transform: translate(-50%, 0);
+}
+.MainSolution .desc_box .tit {
+  display: block;
+  margin: 0 0 2.4rem 0;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+}
+.MainSolution .desc_box .desc {
+  line-height: 2.2rem;
+  min-height: 12rem;
+  margin: 0 0 4rem 0;
+}
+.MainSolution .desc_box .num strong {
+  font-size: 2.4rem;
+  color: #008850;
+}
+.MainSolution .desc_box .box li {
+  display: none;
+}
+.MainSolution .desc_box .box li.on {
+  display: block;
 }
 .MainSolution .tit_wrap {
   text-align: center;
@@ -387,6 +479,10 @@ body {
 .MainSolution .swiper-slide {
   width: 121.2rem;
   padding: 0 1.6rem;
+  filter: grayscale(1);
+}
+.MainSolution .swiper-slide.on {
+  filter: grayscale(0);
 }
 .MainSolution .swiper-slide img {
   display: block;
