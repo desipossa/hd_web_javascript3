@@ -89,7 +89,7 @@ const PORTFOLIO_LEFT_SLIDE = new Swiper('.mp_slide_left', {
 const PORTFOLIO_RIGHT_SLIDE = new Swiper('.mp_slide_right', {
     loop: true,
     slidesPerView: 4.5,
-    spaceBetween: 30,
+    spaceBetween: 18,
     //allowTouchMove: false,
     slideActiveClass: 'on',
 });
@@ -107,9 +107,21 @@ const PORTFOLIO_SLIDE_ARROW_RIGHT = document.querySelector('.MainPortfolio .arro
 PORTFOLIO_SLIDE_ARROW_LEFT.addEventListener('click', () => {
     PORTFOLIO_RIGHT_SLIDE.slidePrev();
 });
+
 PORTFOLIO_SLIDE_ARROW_RIGHT.addEventListener('click', () => {
     PORTFOLIO_RIGHT_SLIDE.slideNext();
 });
+
+
+const SOLUTION_SLIDE = new Swiper('.solu_slide', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 100,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    slideActiveClass: 'on',
+});
+
 
 
 

@@ -1,7 +1,7 @@
 .Header {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1000;
 
     .header_wrap {
         position: absolute;
@@ -18,6 +18,8 @@
 
         background: rgba(0, 0, 0, 0.5);
         transition: 0.5s;
+
+        border-bottom: 1px solid rgba($color: $body-color, $alpha: 0.1);
 
         .logo {
             display: block;
