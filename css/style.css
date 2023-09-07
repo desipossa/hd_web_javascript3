@@ -490,4 +490,86 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.MainPromotion {
+  background: url(../images/main_promotion_bg.jpg) no-repeat left bottom;
+}
+.MainPromotion .tit_wrap {
+  text-align: center;
+}
+.MainPromotion .promotion_movie_wrap {
+  position: relative;
+  max-width: 80rem;
+  height: 45rem;
+  margin: 0 auto;
+}
+.MainPromotion .promotion_movie_wrap #promotion_movie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.MainPromotion .movie_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  border: 6px solid #008850;
+  background: #f9f9f9;
+  color: #008850;
+  border-radius: 50%;
+  text-align: center;
+  line-height: calc(10rem - 12px);
+}
+.MainPromotion .movie_btn::after {
+  content: "\e037";
+  font-variation-settings: "FILL" 1, "wght" 200;
+  font-size: 5rem;
+  font-family: "Material Symbols Outlined";
+}
+.MainPromotion .movie_btn.on::after {
+  content: "\e034";
+}
+
+.MainNews .tit_wrap {
+  text-align: center;
+}
+.MainNews .content {
+  gap: 2rem;
+}
+.MainNews .content > * {
+  flex: 1 1 0;
+}
+.MainNews .content .img_wrap {
+  margin: 0 0 3.2rem 0;
+}
+.MainNews .content img {
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.MainNews .content figure * {
+  display: block;
+}
+.MainNews .content strong {
+  margin: 0 0 1.8rem 0;
+  color: #008850;
+}
+.MainNews .content p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin: 0 0 1.8rem 0;
+}
+.MainNews .content p:hover {
+  text-decoration: underline;
+}
+.MainNews .content span {
+  font-size: 1.4rem;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
