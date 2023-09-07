@@ -165,7 +165,6 @@ const FOOTER_RIGHT_ANCHOR = document.querySelectorAll('.Footer .f_top .right > l
 const FOOTER_RIGHT_LINK = document.querySelectorAll('.Footer .f_top .right .link');
 
 
-const ST = true;
 
 FOOTER_RIGHT_ANCHOR.forEach((it, idx) => {
     it.addEventListener('click', e => {
@@ -186,6 +185,14 @@ FOOTER_RIGHT_ANCHOR.forEach((it, idx) => {
 
     })
 });
+
+
+const TOP_LANG_BTN = document.querySelector('.Header .lang a');
+
+TOP_LANG_BTN.addEventListener('click', e => {
+    e.preventDefault();
+    e.currentTarget.classList.toggle('on')
+})
 
 
 
