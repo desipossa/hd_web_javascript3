@@ -14,8 +14,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://www.youtube.com/iframe_api" defer></script>
-    <script src="./js/custom.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="./js/youtube_api_custom.js" defer></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/custom.js" defer></script>
 </head>
 
 <body>
@@ -96,21 +100,6 @@
                                 <p>현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.</p>
                             </div>
                         </div>
-                        <div class="swiper-slide itm itm01">
-                            <div class="slogan">
-                                <strong>The No.1 for 16 years,<br />we continue to make history of<br />elevators in
-                                    Korea</strong>
-                                <p>16년 연속 1위로 대한민국 엘리베이터의 역사를 만들어 갑니다.</p>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide itm itm02">
-                            <div class="slogan">
-                                <strong>The world expands<br />along the new path created<br />by Hyundai
-                                    Elevator</strong>
-                                <p>현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="arrows">
@@ -127,12 +116,6 @@
                 </div>
                 <ul class="right_link">
                     <li class="on">
-                        <a href="">부산국제금융센터 (BIFC)</a>
-                    </li>
-                    <li>
-                        <a href="">바라얍 메르디안 호텔 (터키)</a>
-                    </li>
-                    <li>
                         <a href="">부산국제금융센터 (BIFC)</a>
                     </li>
                     <li>
@@ -531,7 +514,79 @@
         </main>
 
         <footer class="Footer">
-
+            <div class="f_top">
+                <div class="f_inner customer_content">
+                    <ul class="left">
+                        <li><a href=""><span>개인정보처리방침</span></a></li>
+                        <li><a href="">사이버신문고 현대 </a></li>
+                        <li><a href="">고객케어센터 <span class="tel">1577-0603</span></a></li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="">증명서 발급조회</a>
+                            <dl class="link">
+                                <dt>증명서 발급조회</dt>
+                                <dd><a href="">사용인감신고서 발급 조회</a></dd>
+                                <dd><a href="">재직증명서 발급 조회</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">인트라넷</a>
+                            <dl class="link">
+                                <dt>인트라넷</dt>
+                                <dd><a href="">자재협력시스템</a></dd>
+                                <dd><a href="">인사정보시스템</a></dd>
+                                <dd><a href="">그룹웨어</a></dd>
+                                <dd><a href="">디지털세금계산서</a></dd>
+                                <dd><a href="">전자구매입찰</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">패밀리사이트</span></a>
+                            <dl class="link">
+                                <dt>패밀리사이트</dt>
+                                <dd><a href="" target="_blank">현대아산</a></dd>
+                                <dd><a href="" target="_blank">현대무벡스</a></dd>
+                                <dd><a href="" target="_blank">현대경제연구원 </a></dd>
+                                <dd><a href="" target="_blank">현대투자파트너스 </a></dd>
+                                <dd><a href="" target="_blank">현대글로벌</a></dd>
+                                <dd><a href="" target="_blank">에이블현대호텔앤리조트</a></dd>
+                                <dd><a href="" target="_blank">현대종합연수원</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="f_inner customer_content">
+                    <address>
+                        충청북도 충주시 충주산단1로 128 현대엘리베이터<br />
+                        COPYRIGHT &copy; 2018 HYUNDAIELEVATOR CO.,LTD. ALL RIGHTS RESERVED
+                    </address>
+                    <ul class="sns">
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-youtube-play"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="to_top">
+                <button>
+                    <i class="xi-arrow-top"></i>
+                </button>
+            </div>
         </footer>
     </div>
 

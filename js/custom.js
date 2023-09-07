@@ -51,7 +51,7 @@ const MAIN_SLIDE = new Swiper('.MainSlide', {
     slideActiveClass: 'on',
     on: {
         init: function () {
-            MAIN_SLIDE_NUM_TOTAL.innerHTML = `0${this.slides.length}`;
+            MAIN_SLIDE_NUM_TOTAL.innerHTML = `0${this.slides.length - 2}`;
         },
         slideChangeTransitionStart: function () {
             //console.log(this.realIndex, this.slides.length);
@@ -159,6 +159,37 @@ SOLUTION_SLIDE_DOTS.forEach((it, idx) => {
         SOLUTION_SLIDE.slideToLoop(idx)
     })
 });
+
+
+const FOOTER_RIGHT_ANCHOR = document.querySelectorAll('.Footer .f_top .right > li > a');
+const FOOTER_RIGHT_LINK = document.querySelectorAll('.Footer .f_top .right .link');
+
+
+const ST = true;
+
+FOOTER_RIGHT_ANCHOR.forEach((it, idx) => {
+    it.addEventListener('click', e => {
+        e.preventDefault();
+
+        // FOOTER_RIGHT_ANCHOR.forEach(it => it.classList.remove('on'));
+        //e.target.classList.toggle('on');
+
+        if (it.classList.contains('on')) {
+            it.classList.remove('on');
+            FOOTER_RIGHT_LINK[idx].classList.remove('on');
+        } else {
+            FOOTER_RIGHT_ANCHOR.forEach(el => el.classList.remove('on'));
+            it.classList.add('on');
+            FOOTER_RIGHT_LINK.forEach(el => el.classList.remove('on'));
+            FOOTER_RIGHT_LINK[idx].classList.add('on');
+        }
+
+    })
+});
+
+
+
+
 
 
 

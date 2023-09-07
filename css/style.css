@@ -572,4 +572,107 @@ body {
 .MainNews .content span {
   font-size: 1.4rem;
   font-weight: 300;
+}
+
+.Footer .customer_content {
+  justify-content: space-between;
+}
+.Footer .f_top {
+  position: relative;
+  border-top: 1px solid #eeeeee;
+  line-height: 8rem;
+  font-weight: 600;
+}
+.Footer .f_top .left {
+  display: flex;
+  gap: 4.8rem;
+}
+.Footer .f_top .left li ~ li {
+  position: relative;
+}
+.Footer .f_top .left li ~ li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2.4rem;
+  width: 5px;
+  height: 5px;
+  background: #dddddd;
+  border-radius: 50%;
+}
+.Footer .f_top .left span {
+  color: #008850;
+}
+.Footer .f_top .left span.tel {
+  font-size: 2.2rem;
+}
+.Footer .f_top .right {
+  display: flex;
+  gap: 4.8rem;
+}
+.Footer .f_top .right li > a {
+  position: relative;
+  padding: 0 2rem 0 0;
+  display: block;
+}
+.Footer .f_top .right li > a::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 0;
+  width: 1rem;
+  height: 2px;
+  background: #008850;
+}
+.Footer .f_top .right li > a::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5rem - 1px);
+  right: calc(0.5rem - 1px);
+  width: 2px;
+  height: 1rem;
+  background: #008850;
+}
+.Footer .f_top .right li > a.on::after {
+  display: none;
+}
+.Footer .f_top .right .link {
+  position: absolute;
+  top: -8.2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 118rem;
+  display: flex;
+  padding: 0 4rem;
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  display: none;
+}
+.Footer .f_top .right .link.on {
+  display: flex;
+}
+.Footer .f_top .right .link dt {
+  margin: 0 4.8rem 0 0;
+  font-weight: 600;
+}
+.Footer .f_top .right .link dd {
+  margin: 0 3.2rem 0 0;
+  font-weight: 400;
+}
+.Footer .f_bottom {
+  border-top: 1px solid #eeeeee;
+  padding: 3rem 0;
+}
+.Footer .f_bottom address {
+  line-height: 2.2rem;
+}
+.Footer .f_bottom .sns > * {
+  display: inline-block;
+}
+.Footer .f_bottom .sns > * i {
+  padding: 1.2rem;
+  font-size: 2.4rem;
+  background: #008850;
+  color: #f9f9f9;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
