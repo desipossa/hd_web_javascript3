@@ -125,7 +125,7 @@ const SOLUTION_SLIDE_DOTS = document.querySelectorAll('.MainSolution .dots li');
 
 const SOLUTION_SLIDE = new Swiper('.solu_slide', {
     loop: true,
-    slidesPerView: 2,
+    //slidesPerView: 2,
     spaceBetween: 100,
     centeredSlides: true,
     slidesPerView: "auto",
@@ -158,7 +158,9 @@ SOLUTION_SLIDE_DOTS.forEach((it, idx) => {
     it.addEventListener('click', () => {
         SOLUTION_SLIDE.slideToLoop(idx)
     })
-})
+});
+
+
 
 
 
