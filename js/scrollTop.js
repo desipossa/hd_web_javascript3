@@ -11,8 +11,6 @@ TO_TOP_BUTTON.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     const SCROLL_TOP = window.scrollY;
-    console.log(SCROLL_TOP);
-
     SCROLL_TOP > 1000
         ?
         TO_TOP_BUTTON.classList.add('on')
