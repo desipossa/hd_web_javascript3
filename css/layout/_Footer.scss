@@ -126,4 +126,34 @@
             }
         }
     }
+
+    .to_top {
+        position: fixed;
+        bottom: 10rem;
+        right: 10rem;
+        z-index: 1000;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.5s;
+
+        &.on {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            i {
+                padding: 1rem;
+                background: $primary-color;
+                color: $light-color;
+                font-size: 2rem;
+            }
+        }
+    }
 }

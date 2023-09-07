@@ -675,4 +675,28 @@ body {
   background: #008850;
   color: #f9f9f9;
   border-radius: 50%;
+}
+.Footer .to_top {
+  position: fixed;
+  bottom: 10rem;
+  right: 10rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.Footer .to_top.on {
+  opacity: 1;
+  visibility: visible;
+}
+.Footer .to_top button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.Footer .to_top button i {
+  padding: 1rem;
+  background: #008850;
+  color: #f9f9f9;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
